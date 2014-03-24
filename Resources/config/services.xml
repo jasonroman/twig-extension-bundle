@@ -10,8 +10,8 @@
     </parameters>
 
     <services>
-        <service id="nab.utility.chart.flot" class="%nab.utility.chart.flot.class%" />
-        <service id="nab.utility.twig.utility_extension" class="%nab.utility.twig.utility_extension.class%">
+        <service id="jasonroman.utility.chart.flot" class="%jasonroman.utility.chart.flot.class%" />
+        <service id="jasonroman.utility.twig.utility_extension" class="%jasonroman.utility.twig.utility_extension.class%">
             <tag name="twig.extension" />
         </service>
     </services>
