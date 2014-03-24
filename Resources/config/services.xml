@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jasonroman.utility.chart.flot.class">JasonRoman\UtilityBundle\Chart\Flot</parameter>
+        <parameter key="jasonroman.utility.twig.utility_extension.class">JasonRoman\UtilityBundle\Twig\UtilityExtension</parameter>
+    </parameters>
+
+    <services>
+        <service id="nab.utility.chart.flot" class="%nab.utility.chart.flot.class%" />
+        <service id="nab.utility.twig.utility_extension" class="%nab.utility.twig.utility_extension.class%">
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
+</container>
