@@ -13,7 +13,7 @@
 >
 
     <testsuites>
-        <testsuite name="NABUtilityBundle Test Suite">
+        <testsuite name="JasonRomanUtilityBundle Test Suite">
             <directory>Tests</directory>
         </testsuite>
     </testsuites>

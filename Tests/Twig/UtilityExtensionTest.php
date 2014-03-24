@@ -1,20 +1,20 @@
 <?php
 
-namespace NAB\UtilityBundle\Tests\Twig;
+namespace JasonRoman\UtilityBundle\Tests\Twig;
 
 use Twig_Filter_Method;
 
-use NAB\UtilityBundle\Twig\UtilityExtension;
+use JasonRoman\UtilityBundle\Twig\UtilityExtension;
 
 /**
  * Utility Bundle Twig Extension unit tests
  * 
- * @author Jason Roman <jroman@nabancard.com>
+ * @author Jason Roman <j@jayroman.com>
  */
 class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var NAB\UtilityBundle\Twig\UtilityExtension
+     * @var JasonRoman\UtilityBundle\Twig\UtilityExtension
      */
     private static $class;
 
