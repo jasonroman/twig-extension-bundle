@@ -1,0 +1,10 @@
+{
+	"name": "jasonroman/utility-bundle",
+	"description": "Jason Roman's Utility Bundle for Symfony2",
+	"require": {
+    },
+    "autoload": {
+        "psr-0": { "JasonRoman\\UtilityBundle": "" }
+    },
+    "target-dir": "JasonRoman/UtilityBundle"
+} 
