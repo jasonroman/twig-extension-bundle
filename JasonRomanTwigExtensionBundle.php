@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * @author Jason Roman <j@jayroman.com>
  */
-class JasonRomanUtilityBundle extends Bundle
+class JasonRomanTwigExtensionBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
