@@ -10,8 +10,4 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
  */
 class JasonRomanTwigExtensionBundle extends Bundle
 {
-    public function build(ContainerBuilder $container)
-    {
-        parent::build($container);
-    }
 }
