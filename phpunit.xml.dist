@@ -13,13 +13,13 @@
 >
 
     <testsuites>
-        <testsuite name="JasonRomanUtilityBundle Test Suite">
+        <testsuite name="JasonRomanTwigExtensionBundle Test Suite">
             <directory>Tests</directory>
         </testsuite>
     </testsuites>
 
     <logging>
-      <log type="coverage-html" target="./build/coverage/" title="JasonRomanUtilityBundle Coverage"
+      <log type="coverage-html" target="./build/coverage/" title="JasonRomanTwigExtensionBundle Coverage"
        charset="UTF-8" yui="true" highlight="true"
        lowUpperBound="35" highLowerBound="70"/>
     </logging>
@@ -28,7 +28,7 @@
         <whitelist>
             <directory>./</directory>
             <exclude>
-                <file>JasonRomanUtilityBundle.php</file>
+                <file>JasonRomanTwigExtensionBundle.php</file>
                 <directory>DependencyInjection</directory>
                 <directory>Tests</directory>
             </exclude>
