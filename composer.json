@@ -1,7 +1,7 @@
 {
-	"name": "jasonroman/twig-extension-bundle",
-	"description": "Jason Roman's Twig Extension Bundle for Symfony2",
-	"require": {
+    "name": "jasonroman/twig-extension-bundle",
+    "description": "Jason Roman's Twig Extension Bundle for Symfony2",
+    "require": {
     },
     "autoload": {
         "psr-0": { "JasonRoman\\Bundle\\TwigExtensionBundle": "" }
