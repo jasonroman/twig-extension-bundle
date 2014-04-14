@@ -1,6 +1,6 @@
 <?php
 
-namespace JasonRoman\UtilityBundle;
+namespace JasonRoman\Bundle\TwigExtensionBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

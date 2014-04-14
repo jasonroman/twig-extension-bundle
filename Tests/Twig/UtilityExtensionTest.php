@@ -1,10 +1,10 @@
 <?php
 
-namespace JasonRoman\UtilityBundle\Tests\Twig;
+namespace JasonRoman\Bundle\TwigExtensionBundle\Tests\Twig;
 
 use Twig_Filter_Method;
 
-use JasonRoman\UtilityBundle\Twig\UtilityExtension;
+use JasonRoman\Bundle\TwigExtensionBundle\Twig\UtilityExtension;
 
 /**
  * Utility Bundle Twig Extension unit tests
@@ -14,7 +14,7 @@ use JasonRoman\UtilityBundle\Twig\UtilityExtension;
 class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var JasonRoman\UtilityBundle\Twig\UtilityExtension
+     * @var JasonRoman\Bundle\TwigExtensionBundle\Twig\UtilityExtension
      */
     private static $class;
 

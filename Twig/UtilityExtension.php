@@ -1,6 +1,6 @@
 <?php
 
-namespace JasonRoman\UtilityBundle\Twig;
+namespace JasonRoman\Bundle\TwigExtensionBundle\Twig;
 
 use Twig_Extension;
 use Twig_Filter_Method;

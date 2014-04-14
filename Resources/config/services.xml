@@ -5,13 +5,11 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="jasonroman.utility.chart.flot.class">JasonRoman\UtilityBundle\Chart\Flot</parameter>
-        <parameter key="jasonroman.utility.twig.utility_extension.class">JasonRoman\UtilityBundle\Twig\UtilityExtension</parameter>
+        <parameter key="jasonroman.twig.utility_extension.class">JasonRoman\Bundle\TwigExtensionBundle\Twig\UtilityExtension</parameter>
     </parameters>
 
     <services>
-        <service id="jasonroman.utility.chart.flot" class="%jasonroman.utility.chart.flot.class%" />
-        <service id="jasonroman.utility.twig.utility_extension" class="%jasonroman.utility.twig.utility_extension.class%">
+        <service id="jasonroman.twig.utility_extension" class="%jasonroman.twig.utility_extension.class%">
             <tag name="twig.extension" />
         </service>
     </services>
