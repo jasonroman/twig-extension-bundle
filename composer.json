@@ -1,10 +1,10 @@
 {
-	"name": "jasonroman/utility-bundle",
-	"description": "Jason Roman's Utility Bundle for Symfony2",
+	"name": "jasonroman/twig-extension-bundle",
+	"description": "Jason Roman's Twig Extension Bundle for Symfony2",
 	"require": {
     },
     "autoload": {
-        "psr-0": { "JasonRoman\\Bundle\\UtilityBundle": "" }
+        "psr-0": { "JasonRoman\\Bundle\\TwigExtensionBundle": "" }
     },
-    "target-dir": "JasonRoman/Bundle/UtilityBundle"
+    "target-dir": "JasonRoman/Bundle/TwigExtensionBundle"
 } 
