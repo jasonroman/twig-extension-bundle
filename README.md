@@ -1,11 +1,7 @@
 Jason Roman's Twig Extension Bundle
 ==============
 
-This is my twig extension bundle.  The bundle contains the following components:
-
-# Twig Extensions via Filters
-
-This is a class that contains Twig filters.  See the comments in the class for example usage.  There are 5 filters:
+This is a class that contains Twig filters.  There are 5 filters:
 
 * *phone* - displays a phone number in a specified format
 * *price* - essentially a PHP number_format() clone that adds '$' to the front
