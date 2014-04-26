@@ -5,8 +5,11 @@ php:
   - 5.4
   - 5.5
 
+env:
+  - TWIG_VERSION="dev-master"
+
 install:
-   - composer require twig/twig
+   - composer require twig/twig:${TWIG_VERSION}
 
 before_script:
     - curl -s http://getcomposer.org/installer | php
