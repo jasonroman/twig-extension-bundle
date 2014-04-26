@@ -2,8 +2,6 @@
 
 namespace JasonRoman\Bundle\TwigExtensionBundle\Tests\Twig;
 
-use Twig_Filter_Method;
-
 use JasonRoman\Bundle\TwigExtensionBundle\Twig\UtilityExtension;
 
 /**
@@ -41,7 +39,7 @@ class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('timeAgo', $filters);
 
         foreach ($filters as $filter) {
-            $this->assertInstanceOf('Twig_Filter_Method', $filter);
+            $this->assertInstanceOf('Twig_SimpleFilter', $filter);
         }
     }
 

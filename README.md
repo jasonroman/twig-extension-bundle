@@ -1,5 +1,6 @@
 Jason Roman's Twig Extension Bundle
 ==============
+[![Build Status](https://travis-ci.org/jasonroman/twig-extension-bundle.svg?branch=master)](https://travis-ci.org/jasonroman/twig-extension-bundle)
 
 This is a class that contains Twig filters.  There are 5 filters:
 
