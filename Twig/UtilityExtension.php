@@ -2,9 +2,6 @@
 
 namespace JasonRoman\Bundle\TwigExtensionBundle\Twig;
 
-use Twig_Extension;
-use Twig_Filter_Method;
-
 /**
  * UtilityExtension
  * 
@@ -17,22 +14,20 @@ use Twig_Filter_Method;
  * 
  * @author Jason Roman <j@jayroman.com>
  */
-class UtilityExtension extends Twig_Extension
+class UtilityExtension extends \Twig_Extension
 {
+    /**
+     * {@inheritDoc}
+     */
     public function getFilters()
     {
         return array(
-            'phone'     => new Twig_Filter_Method($this, 'phoneFilter'),
-            'price'     => new Twig_Filter_Method($this, 'priceFilter'),
-            'boolean'   => new Twig_Filter_Method($this, 'booleanFilter'),
-            'md5'       => new Twig_Filter_Method($this, 'md5Filter'),
-            'timeAgo'   => new Twig_Filter_Method($this, 'timeAgoFilter'),
+            'phone'     => new \Twig_SimpleFilter($this, 'phoneFilter'),
+            'price'     => new \Twig_SimpleFilter($this, 'priceFilter'),
+            'boolean'   => new \Twig_SimpleFilter($this, 'booleanFilter'),
+            'md5'       => new \Twig_SimpleFilter($this, 'md5Filter'),
+            'timeAgo'   => new \Twig_SimpleFilter($this, 'timeAgoFilter'),
         );
-    }
-
-    public function getName()
-    {
-        return 'utility_extension';
     }
 
     /**
@@ -189,5 +184,13 @@ class UtilityExtension extends Twig_Extension
  
         // return the trimmed result (the result starts with whitespace)
         return trim($result);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getName()
+    {
+        return 'utility_extension';
     }
 }
