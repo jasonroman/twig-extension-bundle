@@ -30,15 +30,13 @@ class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetFilters()
     {
+        $validFilters = array('phone', 'price', 'boolean', 'md5', 'timeAgo');
+
         $filters = self::$class->getFilters();
 
-        $this->assertArrayHasKey('phone', $filters);
-        $this->assertArrayHasKey('price', $filters);
-        $this->assertArrayHasKey('boolean', $filters);
-        $this->assertArrayHasKey('md5', $filters);
-        $this->assertArrayHasKey('timeAgo', $filters);
-
-        foreach ($filters as $filter) {
+        foreach ($filters as $filter)
+        {
+            $this->assertContains($filter->getName(), $validFilters);
             $this->assertInstanceOf('Twig_SimpleFilter', $filter);
         }
     }

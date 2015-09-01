@@ -22,11 +22,11 @@ class UtilityExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'phone'     => new \Twig_SimpleFilter($this, 'phoneFilter'),
-            'price'     => new \Twig_SimpleFilter($this, 'priceFilter'),
-            'boolean'   => new \Twig_SimpleFilter($this, 'booleanFilter'),
-            'md5'       => new \Twig_SimpleFilter($this, 'md5Filter'),
-            'timeAgo'   => new \Twig_SimpleFilter($this, 'timeAgoFilter'),
+            new \Twig_SimpleFilter('phone', array($this, 'phoneFilter')),
+            new \Twig_SimpleFilter('price', array($this, 'priceFilter')),
+            new \Twig_SimpleFilter('boolean', array($this, 'booleanFilter')),
+            new \Twig_SimpleFilter('md5', array($this, 'md5Filter')),
+            new \Twig_SimpleFilter('timeAgo', array($this, 'timeAgoFilter')),
         );
     }
 

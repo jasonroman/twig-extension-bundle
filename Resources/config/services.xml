@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="jasonroman.twig.utility_extension" class="%jasonroman.twig.utility_extension.class%">
+        <service id="jasonroman.twig.utility_extension" class="%jasonroman.twig.utility_extension.class%" public="false">
             <tag name="twig.extension" />
         </service>
     </services>
