@@ -166,19 +166,23 @@ class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('1 day ago', self::$class->timeAgoFilter(new \DateTime('-1 day')));
         $this->assertEquals('2 days ago', self::$class->timeAgoFilter(new \DateTime('-2 days')));
         $this->assertEquals('14 days ago', self::$class->timeAgoFilter(new \DateTime('-2 weeks')));
+        $this->assertEquals('14 days ago', self::$class->timeAgoFilter('-2 weeks'));
 
         // testing 2 parameters passed
         $this->assertEquals('18 hours ago', self::$class->timeAgoFilter(new \DateTime('-1 day 6 hours'), 2));
         $this->assertEquals('1 day 6 hours ago', self::$class->timeAgoFilter(new \DateTime('-30 hours'), 2));
         $this->assertEquals('2 days 6 hours ago', self::$class->timeAgoFilter(new \DateTime('-54 hours'), 2));
+        $this->assertEquals('2 days 6 hours ago', self::$class->timeAgoFilter('-54 hours', 2));
 
         // testing 3 parameters passed
         $this->assertEquals('1 day ago, yar!', self::$class->timeAgoFilter(new \DateTime('-1 day'), 1, 'ago, yar!'));
+        $this->assertEquals('1 day ago, yar!', self::$class->timeAgoFilter('-1 day', 1, 'ago, yar!'));
 
         // testing 4 parameters passed
         $this->assertEquals('2 days ago', self::$class->timeAgoFilter(new \DateTime(), 1, 'ago', new \DateTime('+2 days')));
         $this->assertEquals('2 days mkay', self::$class->timeAgoFilter(new \DateTime('-4 days'), 1, 'mkay', new \DateTime('-2 days')));
-        $this->assertEquals('2 days mkay', self::$class->timeAgoFilter(new \DateTime('+7 days'), 1, 'mkay', new \DateTime('+9 days')));
+        $this->assertEquals('2 days mkay', self::$class->timeAgoFilter(new \DateTime('+7 days'), 1, 'mkay', new \DateTime('+9 days')))
+        $this->assertEquals('2 days mkay', self::$class->timeAgoFilter('+7 days', 1, 'mkay', new \DateTime('+9 days')));
     }
 
     /**
