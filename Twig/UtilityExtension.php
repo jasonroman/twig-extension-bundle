@@ -115,14 +115,18 @@ class UtilityExtension extends \Twig_Extension
     /**
      * Convert a time to time 'ago', such as 5 days, 1 week, etc.
      * 
-     * @param \DateTime $date
+     * @param \DateTime|string $date
      * @param int $granularity level of granularity (how far to drill down in exact time ago)
      * @param string $postText text to display after the time ago
      * @param \DateTime $dateFrom if wanting time ago from a specific datetime rather than the current datetime
      * @return string|null null if the passed in date is earlier than the date to compare it to
      */
-    public function timeAgoFilter(\DateTime $date, $granularity = 1, $postText = 'ago', \DateTime $dateFrom = null)
+    public function timeAgoFilter($date, $granularity = 1, $postText = 'ago', \DateTime $dateFrom = null)
     {
+        if (!$date instanceof \DateTime) {
+            $date = new \DateTime($date);
+        }
+
         // interval array matching date format and corresponding type
         $intervals  = array(
             'y' => 'year',
