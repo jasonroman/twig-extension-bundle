@@ -156,6 +156,11 @@ class UtilityExtension extends \Twig_Extension
         if ($date > $dateFrom) {
             return null;
         }
+
+        // if the datetime passed is the same as the datetime comparing, return basic info
+        if ($date == $dateFrom) {
+            return '0 seconds '.$postText;
+        }
  
         // get the difference between the two dates
         $difference = $dateFrom->diff($date);
