@@ -209,7 +209,17 @@ class UtilityExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('1 day ago', self::$class->timeAgoFilter(new \DateTime('-30 hours 10 seconds'), 0));
         $this->assertEquals('2 days ago, yar!', self::$class->timeAgoFilter(new \DateTime('-54 hours -10 minutes'), 7, 'ago, yar!'));
         $this->assertEquals('1 year ago', self::$class->timeAgoFilter(new \DateTime('-1 year -2 hours'), 'a', 'ago', new \DateTime('+2 days')));
-        
+    }
+
+    /**
+     * Tests that the time ago filter properly returns when the times are the same
+     */
+    public function testTimeAgoFilterSame()
+    {
+        $dateTime = new \DateTime();
+
+        $this->assertEquals('0 seconds ago', self::$class->timeAgoFilter($dateTime, 1, 'ago', $dateTime)));
+        $this->assertEquals('0 seconds weeee', self::$class->timeAgoFilter($dateTime, 1, 'weeee', $dateTime)));
     }
 
     /**
